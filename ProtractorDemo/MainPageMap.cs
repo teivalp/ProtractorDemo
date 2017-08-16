@@ -13,11 +13,13 @@ namespace FoxSportsSite
     /// </summary>
     partial class MainPage
     {
-        // Header wrapper block
+        #region Header wrapper block
 
         // NFL link
-        public IWebElement NflLink => driver.FindElement(By.XPath("//a[contains(@title='National Football League') and href='/nfl']"));
+        public IWebElement NflLink => driver.FindElement(By.CssSelector("a[title='National Football League']"));
         // Seahawks link 
-        public IWebElement SeahawksLink => driver.FindElement(By.XPath("//a[contains(@href='/nfl/seattle-seahawks-team')]"));
+        public IWebElement SeahawksLink => driver.FindElement(By.CssSelector("a[href='/nfl/seattle-seahawks-team']"));
+
+        #endregion
     }
 }

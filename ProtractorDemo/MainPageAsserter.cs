@@ -7,12 +7,12 @@ namespace FoxSportsSite
     /// Holds all assertions for 
     /// http://www.foxsports.com/
     /// </summary>
-    [TestClass]
-    public partial class MainPage
+
+public partial class MainPage
     {
-        [TestMethod]
-        public void TestMethod1()
+        public void AssertResultsCount(string expectedCount)
         {
+            
         }
     }
 }
