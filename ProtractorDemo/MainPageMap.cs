@@ -16,9 +16,9 @@ namespace FoxSportsSite
         #region Header wrapper block
 
         // NFL link
-        public IWebElement NflLink => driver.FindElement(By.CssSelector("a[title='National Football League']"));
+        public IWebElement NflLink => _driver.FindElement(By.CssSelector("a[title='National Football League']"));
         // Seahawks link 
-        public IWebElement SeahawksLink => driver.FindElement(By.CssSelector("a[href='/nfl/seattle-seahawks-team']"));
+        public IWebElement SeahawksLink => _driver.FindElement(By.CssSelector("a[href='/nfl/seattle-seahawks-team']"));
 
         #endregion
     }

@@ -15,25 +15,25 @@ namespace FoxSportsSite
     partial class MainPage
     {
         // Instantiate a classic Selenium's Webdriver
-        private readonly IWebDriver driver;
+        private readonly IWebDriver _driver;
         private readonly string url = @"http://www.forxsports.com/";
 
-        public MainPage(IWebDriver browser)
+        public MainPage(IWebDriver Driver)
         {
-            driver = browser;
+            _driver = Driver;
         }
 
         public MainPage Navigate()
         {
-            driver.Navigate().GoToUrl(url);
+            _driver.Navigate().GoToUrl(url);
             return this;
         }
 
         public MainPage ClickSeahawks()
         {
-            NflLink.Click();
+            NflLink.Hover(_driver);
+            SeahawksLink.Click();
             return this;
         }
-
     }
 }

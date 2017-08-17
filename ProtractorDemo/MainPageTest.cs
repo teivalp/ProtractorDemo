@@ -76,10 +76,12 @@ namespace FoxSportsSite
         public void NavigateToSeahawksSubSiteTest()
         {
             // ARRANGE
-
+            _mainPage
+                .Navigate()            
             // ACT
-
+                .ClickSeahawks();
             // ASSERT
+
         }
     }
 }
