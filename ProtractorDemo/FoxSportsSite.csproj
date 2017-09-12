@@ -64,6 +64,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="MainPage.cs" />
+    <Compile Include="SeattleSeahawksAsserter.cs" />
     <Compile Include="MainPageAsserter.cs" />
     <Compile Include="MainPageMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

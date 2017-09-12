@@ -19,7 +19,8 @@ namespace FoxSportsSite
         public IWebElement NflLink => _driver.FindElement(By.CssSelector("a[title='National Football League']"));
         // Seahawks link 
         public IWebElement SeahawksLink => _driver.FindElement(By.CssSelector("a[href='/nfl/seattle-seahawks-team']"));
-
+        // Page asserter: <link rel="canonical" href="http://www.foxsports.com">
+        public IWebElement CanoonLink => _driver.FindElement(By.CssSelector(""));
         #endregion
     }
 }

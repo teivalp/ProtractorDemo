@@ -16,7 +16,7 @@ namespace FoxSportsSite
     {
         // Instantiate a classic Selenium's Webdriver
         private readonly IWebDriver _driver;
-        private readonly string url = @"http://www.forxsports.com/";
+        private readonly string url = @"http://www.foxsports.com/";
 
         public MainPage(IWebDriver Driver)
         {
