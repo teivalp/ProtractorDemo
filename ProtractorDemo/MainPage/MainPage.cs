@@ -12,28 +12,28 @@ namespace FoxSportsSite
     /// Contains the constructor(s) and the action methods for
     /// http://www.foxsports.com/
     /// </summary>
-    partial class MainPage
+    public partial class MainPage
     {
         // Instantiate a classic Selenium's Webdriver
         private readonly IWebDriver _driver;
-        private readonly string url = @"http://www.foxsports.com/";
+        private readonly string _url = @"http://www.foxsports.com/";
 
-        public MainPage(IWebDriver Driver)
+        public MainPage(IWebDriver browser)
         {
-            _driver = Driver;
+            _driver = browser;
         }
 
         public MainPage Navigate()
         {
-            _driver.Navigate().GoToUrl(url);
+            _driver.Navigate().GoToUrl(_url);
             return this;
         }
 
-        public MainPage ClickSeahawks()
+        public SeattleSeahawksPage ClickSeahawks()
         {
             NflLink.Hover(_driver);
             SeahawksLink.Click();
-            return this;
+            return new SeattleSeahawksPage();
         }
     }
 }

@@ -63,12 +63,14 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MainPage.cs" />
-    <Compile Include="SeattleSeahawksAsserter.cs" />
-    <Compile Include="MainPageAsserter.cs" />
-    <Compile Include="MainPageMap.cs" />
+    <Compile Include="MainPage\MainPage.cs" />
+    <Compile Include="SeahawksPage\SeahawksPage.cs" />
+    <Compile Include="SeahawksPage\SeattleSeahawksPageAsserter.cs" />
+    <Compile Include="MainPage\MainPageAsserter.cs" />
+    <Compile Include="MainPage\MainPageMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MainPageTest.cs" />
+    <Compile Include="MainPage\MainPageTest.cs" />
+    <Compile Include="SeahawksPage\SeattleSeahawksPageMap.cs" />
     <Compile Include="WebElementExtensions.cs" />
     <Compile Include="WebDriverExtensions.cs" />
   </ItemGroup>

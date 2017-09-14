@@ -10,7 +10,7 @@ namespace FoxSportsSite
 
     public partial class SeattleSeahawksPage
     {
-        public void AssertResultsCount(string expectedCount)
+        public void ResultsCount(string expectedCount)
         {
             
         }

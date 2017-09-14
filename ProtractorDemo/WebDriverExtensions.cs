@@ -27,15 +27,16 @@ namespace FoxSportsSite
         /// <param name="Driver">Browser interface set by test</param>
         /// <param name="By">Object set by test to locate element</param>
         /// <returns>True/False</returns>
-        public static IWebElement IsElementPresent(this IWebDriver Driver, By By)
+        public static bool IsElementPresent(this IWebDriver Driver, By By)
         {
             try
             {
-                return FindElement(Driver, By, 5);
+                FindElement(Driver, By, 5);
+                return true;
             }
             catch (NoSuchElementException)
             {
-                return null;
+                return false;
             }
         }
     }

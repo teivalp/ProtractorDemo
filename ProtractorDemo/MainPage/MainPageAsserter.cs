@@ -10,9 +10,10 @@ namespace FoxSportsSite
 
 public partial class MainPage
     {
-        public void AssertResultsCount(string expectedCount)
+        public MainPage ResultsCount(string expectedCount)
         {
-            
+            Assert.AreEqual(CanonicalLink, expectedCount);
+            return this;
         }
     }
 }

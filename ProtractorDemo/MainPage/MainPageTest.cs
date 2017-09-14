@@ -76,12 +76,12 @@ namespace FoxSportsSite
         public void NavigateToSeahawksSubSiteTest()
         {
             // ARRANGE
-            _mainPage
+            SeattleSeahawksPage seahawkPage = _mainPage
                 .Navigate()            
             // ACT
-                .ClickSeahawks();
-            // ASSERT
-
+                .ClickSeahawks();            
+            // ASSERT            
+            Assert.IsTrue(_driver.FindElement(By.CssSelector("link[rel='canonical'][href='http://www.foxsports.com/nfl/seattle-seahawks-team']")).Displayed);                     
         }
     }
 }
