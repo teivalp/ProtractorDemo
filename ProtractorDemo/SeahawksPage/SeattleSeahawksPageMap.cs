@@ -21,5 +21,12 @@ namespace FoxSportsSite.SeahawksPage
                 return this._driver.FindElement(By.CssSelector("link[rel='canonical'][href='http://www.foxsports.com/nfl/seattle-seahawks-team']"));
             }
         }
+        public IWebElement SeahwkHeader
+        {
+            get
+            {
+                return this._driver.FindElement(By.CssSelector("#wisfoxbox > h1 > span.wisbb_pageInfoPrimaryText"));
+            }
+        }
     }
 }

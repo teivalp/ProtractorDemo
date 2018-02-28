@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 namespace FoxSportsSite
 {
     /// <summary>
-    /// Summary description for UnitTest1
+    /// Test cases for https://www.foxsports.com/ homepage.
     /// </summary>
     [TestClass]
     public class MainPageTest
@@ -72,16 +72,17 @@ namespace FoxSportsSite
 
         [TestMethod]
         [TestCategory("Core")]
-        [Description("")]
+        [Description("Navigate to Seahawks team page from home page NFL menu.")]
         public void NavigateToSeahawksSubSiteTest()
         {
-            // ARRANGE
+            // ARRANGE - Open home page.
             SeattleSeahawksPage seahawkPage = _mainPage
                 .Navigate()            
-            // ACT
-                .ClickSeahawks();            
-            // ASSERT            
-            Assert.IsTrue(_driver.FindElement(By.CssSelector("link[rel='canonical'][href='http://www.foxsports.com/nfl/seattle-seahawks-team']")).Displayed);                     
+            // ACT - Open NFL menu and click Seattle Seahawks link.
+                .ClickSeahawks();
+            // ASSERT - Did "2017 SEATTLE SEAHAWKS" text return from DOM.        
+            string actualText = _driver.FindElement(By.CssSelector("#wisfoxbox > h1 > span.wisbb_pageInfoPrimaryText")).Text;             
+            Assert.AreEqual(actualText,"2017 SEATTLE SEAHAWKS:");
         }
     }
 }
